@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>espace etudiant</title>
+  <style>
+    body {
+      background-image: url(bg.jpg);
+      background-color: #ECECEC;
+      background-repeat: no-repeat;
+      background-size: 1500px 620px;
+      text-align: center;
+      font-size: 10px;
+      color: white;
+    }
+
+    h2{
+      color: #4476C1;
+      font-size: 20px;
+      align-content: center;
+    }
+
+    .form1 {
+      background: #4476C1;
+      margin-top: 0px;
+      width: 40%;
+      border-radius: 15px;
+      align-items: center;
+    }
+
+    .form1 input {
+     
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .form1 input[type="text"] {
+      font-size: 20px;
+    }
+
+    .form1 input[type="submit"] {
+      font-size: 10px;
+      height: 40px;
+      background-color: #FFFFFF;
+    }
+
+    .form1 {
+      background: #4476C1;
+      padding: 24px;
+      margin: 0 auto; /* Center the .form1 element horizontally */
+      width: clamp(200px, 50%, 500px); /* Set the width of .form1 to be 50% of its parent container, but with a minimum and maximum width */
+      border-radius: 15px;
+      align-items: center;
+      display: flex; /* Use Flexbox to center the input element */
+      flex-direction: column; /* Stack the input elements vertically */
+    }
+    
+    .form1 input[type="submit"] {
+      font-size: 10px;
+      height: 40px;
+      background-color: #FFFFFF;
+      margin-top: 10px; /* Add some space between the input elements */
+      width: 100%; /* Make the submit button take up the full width of .form1 */
+    }
+    .form1 input[type="text"] {
+      font-size: 10px;
+      importance: 1;
+    }
+    
+    .form1 input[type="submit"]:hover {
+      color: white;
+      background-color: #4476C1;
+      importance: 2;
+    }
+    .form1 select {
+      size: 400px;
+      height: 30px;
+      width: 252px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .form1 input[type="radio"] {
+      font-size: 10px;
+      size: 10px;
+      height: 12px;
+    }
+
+    .site-btn {
+      background-color: #4476C1;
+      color: white;
+      font-size: 10px;
+      height: 40px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    .site-btn:hover {
+      background-color: #305A9C;
+    }
+    .custom-breadcrumns {
+      padding: 20px 0; }
+      .custom-breadcrumns span, .custom-breadcrumns a {
+        font-size: 14px; }
+      .custom-breadcrumns a {
+        display: inline-block;
+        color: #bdbdbd; }
+        .custom-breadcrumns a:hover {
+          color: #4476C1; }
+      .custom-breadcrumns .current {
+        color: #4476C1; }
+  </style>
+</head>
+<body>
+  <div class="custom-breadcrumns border-bottom">
+    <div class="container">
+      <a href="contenu.html">Home</a>
+      <span class="mx-3 icon-keyboard_arrow_right"></span>
+      <span class="current">Rechercher</span>
+    </div>
+  </div>
+<section class="search-section ss-other-page">
+  <div class="container">
+    <div class="search-warp">
+      <div class="section-title text-white">
+        <h2><span>Chercher Professeur</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+      
+          <div class="form1">
+            <form class="course-search-form" method="GET" action="search.php">
+              <input type="text" name="name" placeholder="Nom Prenom">
+              <br><br>
+              <input type="text" name="id" class="last-m" placeholder="ID Prof">
+               <br><br>
+               <button type="submit" formaction="formulaireprof.html">Chercher</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

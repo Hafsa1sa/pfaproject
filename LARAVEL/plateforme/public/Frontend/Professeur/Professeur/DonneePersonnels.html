@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Données Personnelles du Professeur</title>
+    <script>
+        // Fonction de validation de formulaire
+        function validerForm(form) {
+            // Ajoutez votre logique de validation ici
+            // Par exemple, vérifiez si tous les champs obligatoires sont remplis
+            // et si les données sont dans le bon format
+        }
+    </script>
+</head>
+<body bgcolor="#ECECEC">
+    <div align="center">
+        <p align="center" style="margin-top: 0; margin-bottom: 0">
+            <b><font face="Tahoma" size="4" color="#4476C1">Modifier vos données</font></b>
+        </p>
+    </div>
+    <br>
+
+    <form method="post" action="updatedata.php" name="formulaire">
+        <div align="center">
+            <table width="820" id="table3" bgcolor="#FFFFFF" style="border-width:0px; font-family: Tahoma; font-size: 10pt">
+                <tr>
+                    <td style="color:#FFFFFF;" bgcolor="#4476C1" colspan="2">
+                        <b><font size="3" face="Tahoma">Données d'enregistrement</font></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">Nom :</td>
+                    <td width="615">
+                        <input readonly name="nom1" maxlength="42" size="40" value="Votre nom" onkeyup="javascript:this.value=this.value.toUpperCase();" onkeypress="javascript:this.value=this.value.toUpperCase();" onmouseup="javascript:this.value=this.value.toUpperCase();" onchange="javascript:this.value=this.value.toUpperCase();">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">Prénom :</td>
+                    <td width="615">
+                        <input readonly name="prenom1" maxlength="42" size="40" value="Votre prénom" onKeyUp="javascript:this.value=this.value.toUpperCase();" onKeyPress="javascript:this.value=this.value.toUpperCase();" onMouseUp="javascript:this.value=this.value.toUpperCase();" onChange="javascript:this.value=this.value.toUpperCase();">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">Email :</td>
+                    <td width="615">
+                        <input name="email1" size="40" maxlength="42" value="professeur@example.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">GSM :</td>
+                    <td width="615">
+                        <input name="GSM1" size="40" maxlength="42" onKeyPress="return isNumber(event)" value="xx xx xx xx xx ">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">CIN :</td>
+                    <td width="615">
+                        <input name="CIN" size="40" maxlength="42" value="Votre CIN" onkeyup="javascript:this.value=this.value.toUpperCase();" onkeypress="javascript:this.value=this.value.toUpperCase();" onmouseup="javascript:this.value=this.value.toUpperCase();" onchange="javascript:this.value=this.value.toUpperCase();">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">Matricule :</td>
+                    <td width="615">
+                        <input name="matricule" size="40" maxlength="42" value="Votre matricule">
+                    </td>
+                </tr>
+                <!-- Ajoutez ici d'autres champs pour les données spécifiques du professeur -->
+                <tr>
+                    <td width="193" bgcolor="#F4F4F0">Département :</td>
+                    <td width="615">
+                        <input name="departement" size="40" maxlength="42" value="Département de Physique">
+                    </td>
+                </tr>
+            </table>
+            <br>
+        </div>
+
+        <div align="center">
+            <table width="820" bgcolor="#FFFFFF" style="border-width:0px; font-family:Tahoma; font-size:10pt">
+                <tr>
+                    <td align="center">
+                        <input type="submit" name="submit" value="Soumettre" onClick="validerForm(this.form)" style="font-family: Arial; font-size: 10pt; font-weight:bold">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

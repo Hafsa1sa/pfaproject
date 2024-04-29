@@ -1,0 +1,32 @@
+.calendar {
+    /* Ajoutez des styles pour le conteneur du calendrier */
+  }
+  
+  .header {
+    /* Styles pour l'en-tête du calendrier */
+  }
+  
+  .weekdays {
+    /* Styles pour les jours de la semaine */
+  }
+  
+  .days {
+    /* Styles pour les jours du calendrier */
+  }
+  
+  .day {
+    /* Styles pour chaque jour du calendrier */
+    position: relative;
+    /* Autres styles à personnaliser selon vos besoins */
+  }
+  
+  .justified {
+    /* Styles pour les absences justifiées */
+    background-color: green;
+  }
+  
+  .unjustified {
+    /* Styles pour les absences non justifiées */
+    background-color: red;
+  }
+  

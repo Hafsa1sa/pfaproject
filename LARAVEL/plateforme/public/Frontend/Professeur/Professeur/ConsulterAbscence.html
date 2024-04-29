@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indication de séance</title>
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            background-color: #ECECEC;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            margin-top: 20px;
+        }
+        .form1 {
+            background: #4476C1;
+            padding: 24px;
+            width: 60%;
+            margin: auto;
+            border-radius: 15px;
+        }
+        h1 {
+            color: #4476C1;
+            font-size: 28px;
+        }
+        input, select {
+            width: calc(100% - 48px);
+            height: 40px;
+            border-radius: 7px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #FFFFFF;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            color: white;
+            background-color: #4476C1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Consultation d'abscence</h1>
+        <div class="form1">
+            <form name="simple" onsubmit="return empty();" method="post" action="Ass1.php">
+                L'élément:
+                <select id="selection1">
+                    <option value="">élément</option>
+                    <option value="choix1">choix1</option>
+                    <option value="choix2">choix2</option>
+                    <option value="choix3">choix3</option>
+                </select>
+                <br><br>
+                La filière:
+                <select id="selection2">
+                    <option value="">filière</option>
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Soumettre">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

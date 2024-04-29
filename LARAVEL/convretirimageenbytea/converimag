@@ -1,0 +1,50 @@
+import os
+import psycopg2
+from psycopg2 import sql
+from psycopg2.extensions import Binary
+
+# Connexion à la base de données PostgreSQL
+conn = psycopg2.connect(
+    dbname="ENSAJdb",
+    user="postgres",
+    password="AMINA123",
+    host="localhost"
+)
+
+# Répertoire contenant les images
+repertoire_images = 'photos'
+
+# Liste des fichiers dans le répertoire
+fichiers_images = [fichier for fichier in os.listdir(repertoire_images) if fichier.endswith('.jpg')]
+
+# Définition de la requête SQL pour insérer l'image dans la base de données
+query = sql.SQL("INSERT INTO public.\"Etudiant\" (\"id\", \"CNE\", \"nom\", \"prénom\", \"date de naissance\", \"lieu de naissance\", \"CIN\", \"email\", \"GSM\", \"photo\", \"filière_nom\", \"niveau_id\") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+
+# Exécution de la requête pour chaque fichier image
+cur = conn.cursor()
+for fichier_image in fichiers_images:
+    # Extraire le CNE de l'étudiant du nom de fichier
+    id = fichier_image.split('.')[0].split('_')[0]  # Supposer que le nom de fichier est sous la forme "CNE_NOM_PRENOM.jpg"
+    
+    # Demander à l'utilisateur de saisir les informations de l'étudiant
+    cne = input("Entrez le cne de l'étudiant : ")
+    nom = input("Entrez le nom de l'étudiant : ")
+    prenom = input("Entrez le prénom de l'étudiant : ")
+    date_naissance = input("Entrez la date de naissance de l'étudiant (format YYYY-MM-DD) : ")
+    lieu_naissance = input("Entrez le lieu de naissance de l'étudiant : ")
+    CIN = input("Entrez le CIN de l'étudiant : ")
+    email = input("Entrez l'email de l'étudiant : ")
+    GSM = input("Entrez le GSM de l'étudiant : ")
+    filiere_nom = input("Entrez le nom de la filière de l'étudiant : ")
+    niveau_id = input("Entrez l'identifiant du niveau de l'étudiant : ")
+
+    with open(os.path.join(repertoire_images, fichier_image), 'rb') as f:
+        image_bytes = Binary(f.read())
+    
+    # Exécution de la requête avec les données de l'image
+    cur.execute(query, (id, cne, nom, prenom, date_naissance, lieu_naissance, CIN, email, GSM, image_bytes, filiere_nom, niveau_id))
+
+# Commit des changements et fermeture de la connexion
+conn.commit()
+cur.close()
+conn.close()

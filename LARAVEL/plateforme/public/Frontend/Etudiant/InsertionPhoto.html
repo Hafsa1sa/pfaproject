@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insertion Photo d'identité</title>
+</head>
+<body style="background-color: #ECECEC;">
+    <br>
+    <h1 style="text-align: center; color: #4476C1;">Insértion photo d'identité</h1>
+
+    <p align="center">
+        <img src="photoIdentite.jpeg" height="160px">
+    </p>
+
+    <form enctype="multipart/form-data" action="updatepic.php" method="POST" name="formulaire" onSubmit="return checkFile();">
+        <div align="center">
+            <table>
+                <tr>
+                    <td width="600px" align="center">
+                        <font size="3" color="#4476C1"><b>Insérer votre photo d'identité en format jpg </b></font>(Taille max : 400K)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p align="center">
+                            <input name="uploadfile" id="uploadfile" type="file" accept="image/jpeg" size="45" style="border: 1px solid #4476C1;">
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table>
+                <tr>
+                    <td width="600px">
+                        <p align="center">
+                            <input type="submit" name="submit" value="  Envoyer la photo  " onClick="validerForm(this.form)" style="font-family: Arial; font-size: 14pt; font-weight: bold; background-color: #4476C1; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,301 @@
+
+<html>
+
+<body bgcolor='#ECECEC'>
+  <div align='center'>
+    <p align='center' style='margin-top: 0; margin-bottom: 0'></p>
+
+
+    <p align="center" style="margin-top: 0; margin-bottom: 0"><b>
+        <font face="Tahoma" size="4" color="#4476C1">Attribuer l'élément au professeur</font>
+      </b></p>
+    <p style="margin-top: 0; margin-bottom: 0" align="center">&nbsp;</p>
+
+
+
+
+
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+<html>
+
+<head>
+
+
+
+
+
+  <script language="JavaScript">
+
+    function isNumber(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+      }
+      return true;
+    }
+
+
+    function nospace(evt) {
+      evt = (evt) ? evt : window.event;
+      var code = (evt.which) ? evt.which : evt.keyCode;
+
+      if (((code < 48) || (code > 57 && code < 65) || (code > 90 && code < 97) || (code > 122)) && code != 188 && code != 110 && code != 8
+        && code != 9 && code != 46 && code != 37 && code != 39 && code != 16) {
+        return false;
+      }
+
+      return true;
+    }
+
+
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+
+
+</head>
+
+
+
+
+<body bgcolor="#DDECFE">
+
+
+  <form method="post" action="updatedata.php" name="formulaire">
+
+
+    <div align="center">
+
+      <table width="820" id="table3" bgcolor="#FFFFFF" style="border-width:0px; font-family: Tahoma; font-size: 10pt">
+        <tr>
+          <td style="color:#FFFFFF;" bgcolor="#4476C1" colspan="2" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium;
+     border-bottom-style:solid; border-bottom-width:1px"><b>
+              <font size="3" face="Tahoma">Données Etudiant</font>
+            </b></td>
+        </tr>
+        <tr>
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">Nom :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"> <b>
+              <font face="Arial">
+                <input readonly name="nom1" maxlength="42" size="40" value="votre nom"
+                  onkeyup="javascript:this.value=this.value.toUpperCase();"
+                  onkeypress="javascript:this.value=this.value.toUpperCase();"
+                  onmouseup="javascript:this.value=this.value.toUpperCase();"
+                  onchange="javascript:this.value=this.value.toUpperCase();">
+
+              </font>
+            </b></td>
+        </tr>
+
+        <tr>
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">Prénom :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"><b>
+              <font face="Arial"><b>
+                  <font face="Arial">
+                    <input readonly name="prenom1" maxlength="42" size="40" value="votre prenom"
+                      onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                      onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                      onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                      onChange="javascript:this.value=this.value.toUpperCase();">
+                  </font>
+                </b></font>
+            </b></td>
+        </tr>
+
+        <tr>
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">Email :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"><b>
+              <font face="Arial"><b>
+                  <font face="Arial">
+                    <input readonly name="prenom1" maxlength="42" size="40" value="Email de l'etudiant"
+                      onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                      onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                      onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                      onChange="javascript:this.value=this.value.toUpperCase();">
+                  </font>
+                </b></font>
+            </b></td>
+        </tr>
+        <tr>
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">GSM :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"><b>
+              <font face="Arial"><b>
+                  <font face="Arial">
+                    <input readonly name="prenom1" maxlength="42" size="40" value="GSM de l'étudiant"
+                      onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                      onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                      onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                      onChange="javascript:this.value=this.value.toUpperCase();">
+                  </font>
+                </b></font>
+            </b></td>
+        </tr>
+      
+        <tr>
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">Date de naissance :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"><b>
+              <font face="Arial"><b>
+                  <font face="Arial">
+                    <input readonly name="prenom1" maxlength="42" size="40" value="xx/xx/xxxx"
+                      onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                      onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                      onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                      onChange="javascript:this.value=this.value.toUpperCase();">
+                  </font>
+                </b></font>
+            </b></td>
+        </tr>
+
+
+        <tr>
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">Lieu de naissance :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"><b>
+              <font face="Arial"><b>
+                  <font face="Arial">
+                    <input readonly name="prenom1" maxlength="42" size="40" value="Ville"
+                      onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                      onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                      onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                      onChange="javascript:this.value=this.value.toUpperCase();">
+                  </font>
+                </b></font>
+            </b></td>
+        </tr>
+      
+      
+
+        <tr style="display:yes">
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">CIN :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium">
+            <b>
+              <font face="Arial">
+                <input readonly name="prenom1" maxlength="42" size="40" value="Cin"
+                  onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                  onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                  onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                  onChange="javascript:this.value=this.value.toUpperCase();">
+              </font>
+            </b>
+
+          </td>
+        </tr>
+        <tr style="display:yes">
+          <td width="193" bgcolor="#F4F4F0" style="border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium"
+            valign="top">CNE :</td>
+          <td width="615" style="font-weight:bold; border-left-style:none; border-left-width:medium; 
+    border-right-style:none; border-right-width:medium; border-bottom-style:none; border-bottom-width:medium">
+            <b>
+              <font face="Arial">
+                <input readonly name="prenom1" maxlength="42" size="40" value="Cne"
+                  onKeyUp="javascript:this.value=this.value.toUpperCase();"
+                  onKeyPress="javascript:this.value=this.value.toUpperCase();"
+                  onMouseUp="javascript:this.value=this.value.toUpperCase();"
+                  onChange="javascript:this.value=this.value.toUpperCase();">
+              </font>
+            </b>
+
+          </td>
+        </tr>
+  
+        <tr style="display:none">
+          <td width="193" bgcolor="#F4F4F0" valign="top" style="border-style: none; border-width: medium">
+            Adresse fixe:</td>
+          <td width="615" style="border-style: none; border-width: medium">
+            <font face="Arial">
+              <textarea rows="3" name="adresse"
+                style="width: 353px;  font-size:12px;  font-family: Arial, Helvetica, sans-serif"></textarea>
+            </font>
+          </td>
+        </tr>
+      </table<
+      <br>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 form-group">
+      <label for="filiere">Filière à enseigner</label>
+      <select id="selection" class="form-control form-control-lg">
+          <option>option</option>
+          <option>CP</option>
+          <option>2ITE</option>
+          <option>ISIC</option>
+          <option>GC</option>
+          <option>GI</option>
+          <option>CCN</option>
+      </select>
+</div>
+</div>
+       <div class="row">
+  <div class="col-md-6 form-group">
+      <label for="filiere">Element à enseigner</label>
+      <select id="selection" class="form-control form-control-lg">
+          <option>option</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+      </select>
+</div>
+</div>
+
+
+    <div align="center">
+
+      <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+      <table width="820" bgcolor="#FFFFFF" style="border-width:0px; font-family:Tahoma; font-size:10pt">
+
+        <tr>
+          <td align="center">
+
+            <p align="center" style="margin-top: 0; margin-bottom: 0">
+              <font face="Arial">
+                <input type="submit" name="submit" value="Soumettre" onClick="validerForm(this.form)"
+                  style="font-family: Arial; font-size: 10pt; font-weight:bold" />
+              </font>
+          </td>
+        </tr>
+      </table>
+      <p align="center" style="margin-top: 0; margin-bottom: 0">
+    </div>
+
+
+    &nbsp;
+  </form>
+</body>
+
+</html>

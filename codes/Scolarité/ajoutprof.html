@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Academics &mdash; Website by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+        <div align='center'>
+   <div style="background-color: #4476C1; padding: 20px;">
+  <p align="center" style="margin-top: 0; margin-bottom: 0;">
+    <b>
+      <font face="Tahoma" size="4" color="#FFFFFF">Ajout de professeur</font>
+    </b>
+  </p>
+</div>
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+          <div class="ml-auto">
+            <div class="social-wrap">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+    </header>
+
+    
+    <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('images/bg_1.jpg')">
+          <div class="row align-items-end">
+            <div class="col-lg-7">
+           
+   
+   
+            </div>
+          </div>
+        </div>
+      </div> 
+    
+
+
+    <div class="site-section">
+<div class="container">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="fname">Nom</label>
+                    <input type="text" id="fname" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="lname">Prenom</label>
+                    <input type="text" id="lname" class="form-control form-control-lg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="eaddress">Email</label>
+                    <input type="text" id="eaddress" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="tel">GSM</label>
+                    <input type="text" id="tel" class="form-control form-control-lg">
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="eaddress">Date de Naissance</label>
+                    <input type="text" id="date" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="tel">Lieu de Naissance</label>
+                    <input type="text" id="lieu" class="form-control form-control-lg">
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="eaddress">CNE</label>
+                    <input type="text" id="cne" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="tel">CIN</label>
+                    <input type="text" id="cin" class="form-control form-control-lg">
+                </div>
+            </div>
+            <div class="row">
+    <div class="col-md-6 form-group">
+        <label for="filiere">Filière à enseigner</label>
+        <select id="selection" class="form-control form-control-lg">
+            <option>option</option>
+            <option>2AP</option>
+            <option>2ITE</option>
+            <option>ISIC</option>
+            <option>GC</option>
+            <option>GI</option>
+            <option>CCN</option>
+        </select>
+</div>
+    <div class="col-md-6 form-group">
+        <label for="filiere">Element à enseigner</label>
+        <select id="selection" class="form-control form-control-lg">
+            <option>option</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <input type="submit" value="+Ajouter" class="btn btn-primary btn-lg px-5" id="ajouterBtn">
+    </div>
+  </div>
+
+  
+  
+<script language="JavaScript">
+document.addEventListener('DOMContentLoaded', function () {
+  var ajouterBtn = document.getElementById('ajouterBtn');
+
+  // Fonction pour changer le contenu du bouton
+  function changerBouton() {
+    ajouterBtn.value = "Étudiant ajouté!";
+    ajouterBtn.disabled = true; // Désactiver le bouton après ajout
+  }
+
+  // Ajouter un écouteur d'événements pour le clic sur le bouton
+  ajouterBtn.addEventListener('click', changerBouton);
+});
+</script>
+   
+<style>
+/* Style pour le conteneur principal du formulaire */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+/* Style pour les étiquettes des champs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style pour les champs de saisie */
+input[type="text"],
+select {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style pour le bouton Ajouter */
+input[type="submit"] {
+  width: auto; /* Largeur automatique pour centrer */
+  padding: 15px 20px; /* Ajoutez un peu de rembourrage pour agrandir le bouton */
+  background-color: green; /* Couleur verte */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Assurez-vous que le bouton occupe toute la largeur disponible */
+  margin: 0 auto;
+  
+}
+
+/* Style pour le bouton Ajouter au survol */
+input[type="submit"]:hover {
+  background-color: vert;
+}
+
+/* Style pour les colonnes du formulaire */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Style pour les colonnes du formulaire - version mobile */
+.col-md-6 {
+  flex: 0 0 calc(50% - 10px);
+  margin-right: 20px;
+}
+
+/* Style pour les colonnes du formulaire - version desktop  pourque chaque botton occupe la moitier de la page*/
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+.h2{
+margin: 0;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+</style>
